@@ -1,0 +1,26 @@
+@media (min-width: 768px){
+.sidebar .nav-item .nav-link{
+	padding: 10px 1rem !important;
+}
+}
+.sidebar-heading{
+	margin-bottom: 5px;
+}
+hr.sidebar-divider{
+	margin-top: 5px !important;
+}
+.sidebar .nav-item.active{
+	background: #fff !important;
+}
+.sidebar .nav-item.active .nav-link{
+	color: #4e73df !important;
+}
+.sidebar-dark .nav-item.active .nav-link i{
+	color: #4e73df !important;
+}
+.text-black{
+	color: #333 !important;
+}
+.table tr th, .table tr td{
+	font-size: 13px !important;
+}

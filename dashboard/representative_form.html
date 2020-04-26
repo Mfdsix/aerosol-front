@@ -17,6 +17,7 @@
 
   <!-- Custom styles for this template-->
   <link href="../static/dashboard/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../static/dashboard/css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -54,21 +55,37 @@
           Personal Info
         </div>
 
-        <li class="nav-item active">
-          <a class="nav-link" href="representative.html">
-            <i class="fas fa-fw fa-users"></i>
-            <span>Representative Data</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="organisasi.html">
+            <i class="fas fa-fw fa-building"></i>
+            <span>Data Organisasi</span></a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="representative.html">
+              <i class="fas fa-fw fa-users"></i>
+              <span>Daftar Penanggungjawab</span></a>
+            </li>
 
-          <!-- Divider -->
-          <hr class="sidebar-divider">
+            <!-- Divider -->
+            <hr class="sidebar-divider">
 
-          <!-- Sidebar Toggler (Sidebar) -->
-          <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-          </div>
+            <div class="sidebar-heading">
+              Pemesanan
+            </div>
 
-        </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="pesanan.html">
+                <i class="fas fa-fw fa-archive"></i>
+                <span>Daftar Pesanan</span></a>
+              </li>
+
+              <hr class="sidebar-divider">
+              <!-- Sidebar Toggler (Sidebar) -->
+              <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+              </div>
+
+            </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -230,7 +247,7 @@
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                   <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Kimaya Agata</span>
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Pengguna Aerosol</span>
                     <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                   </a>
                   <!-- Dropdown - User Information -->
@@ -265,8 +282,7 @@
 
               <!-- Page Heading -->
               <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Representative Data</h1>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                <h1 class="h3 mb-0 text-gray-800">Data Penanggungjawab</h1>
               </div>
 
               <!-- Content Row -->
@@ -274,31 +290,31 @@
                 <div class="col-md-7">
                   <div class="card">
                     <div class="card-body">
-                      <div class="pb-4">
-                          <h5>Add Representative Data</h5>
+                      <div class="pb-2">
+                          <h5>Tambah Penanggungjawab</h5>
                           <hr>
                       </div>
 
                       <form>
                         <div class="form-group">
-                          <label>Representative Phone Number</label>
+                          <label>Nomor Telepon</label>
                           <input type="number" name="repr_phone_number" class="form-control" required="">
                         </div>
                         <div class="form-group">
-                          <label>Representative Email Address</label>
+                          <label>Alamat Email</label>
                           <input type="email" name="repr_email" class="form-control" required="">
                         </div>
                         <div class="form-group">
-                          <label>Representative Password</label>
+                          <label>Password</label>
                           <input type="password" name="repr_email" class="form-control" required="">
                         </div>
                         <div class="form-group">
-                          <label>Representative Fullname</label>
+                          <label>Nama Lengkap</label>
                           <input type="text" name="repr_full_name" class="form-control" required="">
                         </div>
                         <hr>
                         <div>
-                          <button type="button" class="btn btn-md btn-success">Add Data</button>
+                          <button type="button" onclick="window.location.href='representative.html'" class="btn btn-md btn-primary">Simpan Data</button>
                         </div>
                       </form>
                     </div>

@@ -17,6 +17,8 @@
 
   <!-- Custom styles for this template-->
   <link href="../static/dashboard/css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+  <link href="../static/dashboard/css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -54,21 +56,37 @@
           Personal Info
         </div>
 
-        <li class="nav-item active">
-          <a class="nav-link" href="representative.html">
-            <i class="fas fa-fw fa-users"></i>
-            <span>Representative Data</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="organisasi.html">
+            <i class="fas fa-fw fa-building"></i>
+            <span>Data Organisasi</span></a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="representative.html">
+              <i class="fas fa-fw fa-users"></i>
+              <span>Daftar Penanggungjawab</span></a>
+            </li>
 
-          <!-- Divider -->
-          <hr class="sidebar-divider">
+            <!-- Divider -->
+            <hr class="sidebar-divider">
 
-          <!-- Sidebar Toggler (Sidebar) -->
-          <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-          </div>
+            <div class="sidebar-heading">
+              Pemesanan
+            </div>
 
-        </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="pesanan.html">
+                <i class="fas fa-fw fa-archive"></i>
+                <span>Daftar Pesanan</span></a>
+              </li>
+
+              <hr class="sidebar-divider">
+              <!-- Sidebar Toggler (Sidebar) -->
+              <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+              </div>
+
+            </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -230,7 +248,7 @@
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                   <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Kimaya Agata</span>
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Pengguna Aerosol</span>
                     <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                   </a>
                   <!-- Dropdown - User Information -->
@@ -265,8 +283,7 @@
 
               <!-- Page Heading -->
               <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Representative Data</h1>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                <h1 class="h3 mb-0 text-gray-800">Daftar Penanggungjawab</h1>
               </div>
 
               <!-- Content Row -->
@@ -274,22 +291,25 @@
                 <div class="col-md-12">
                   <div class="card">
                     <div class="card-body">
-                      <div class="row pb-4">
+                      <div class="pb-2">
+                        <div class="row">
                         <div class="col-md-6">
-                          <h5>Representative Data</h5>
+                          <h5>Daftar Penanggungjawab</h5>
                         </div>
                         <div class="col-md-6 text-right">
-                          <a href="representative_form.html" class="btn btn-md btn-success"><i class="fas fa-plus"></i> Add Data</a>
+                          <a href="representative_form.html" class="btn btn-sm font-weight-bold btn-success"><i class="fas fa-plus"></i> Tambah Data</a>
                         </div>
+                      </div>
+                      <hr>
                       </div>
 
                       <table class="table table-hovered table-bordered">
                         <thead>
                           <tr>
                             <th>No</th>
-                            <th>Fullname</th>
+                            <th>Nama Lengkap</th>
                             <th>Email</th>
-                            <th>Phone</th>
+                            <th>No Telpon</th>
                             <th>Actions</th>
                           </tr>
                         </thead>
@@ -306,6 +326,7 @@
                                   <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="representative.html">Aktifkan</a>
                                   <a class="dropdown-item" href="representative_form.html">Edit</a>
                                   <a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal">Delete</a>
                                 </div>
@@ -417,6 +438,13 @@
       <!-- Page level custom scripts -->
       <script src="../static/dashboard/js/demo/chart-area-demo.js"></script>
       <script src="../static/dashboard/js/demo/chart-pie-demo.js"></script>
+      <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".table").DataTable();
+  })
+</script>
 
     </body>
 
